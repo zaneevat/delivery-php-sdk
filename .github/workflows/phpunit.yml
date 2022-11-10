@@ -34,7 +34,7 @@ jobs:
           composer update ${{ env.COMPOSER_FLAGS }}
 
       - name: "run unit tests"
-        run: "composer phpunit-run-unit-tests"
+        run: "composer phpunit"
 
       - name: "is unit tests tests succeeded"
         if: ${{ success() }}

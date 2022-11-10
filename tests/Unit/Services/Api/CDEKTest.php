@@ -7,9 +7,9 @@ use PHPUnit\Framework\TestCase;
 
 class CDEKTest extends TestCase
 {
-    public function testInit(): void
+    public function testOrderInfo(): void
     {
-        $order = (new CDEK())->order('123');
-        $this->assertEquals([], $order);
+        $orderInfo = CDEK::create()->orderInfo('123');
+        $this->assertSame([], $orderInfo);
     }
 }

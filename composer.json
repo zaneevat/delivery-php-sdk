@@ -36,10 +36,10 @@
     "friendsofphp/php-cs-fixer": "^3.13"
   },
   "scripts": {
-    "phpunit-run-unit-tests": [
+    "phpunit": [
       "phpunit --testsuite unit_tests"
     ],
-    "phpstan-analyse": [
+    "phpstan": [
       "vendor/bin/phpstan analyse --memory-limit 1G"
     ],
     "php-cs-fixer": [

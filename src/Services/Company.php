@@ -14,4 +14,11 @@ enum Company: string
             self::CDEK => CDEK::class,
         };
     }
+
+    public function initObject()
+    {
+        return match ($this) {
+            self::CDEK => CDEK::create()
+        };
+    }
 }
