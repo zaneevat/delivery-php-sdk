@@ -63,5 +63,5 @@ $multipleCalculations = $delivery
         ],            
     ]);
 
-$orderInfo1 = \Delivery\SDK\Services\Company::from('cdek')->initObject()->orderInfo();
+$orderInfo1 = \Delivery\SDK\Services\Company::from('cdek')->create()->orderInfo();
 ```

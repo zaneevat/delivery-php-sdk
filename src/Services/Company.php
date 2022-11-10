@@ -3,6 +3,7 @@
 namespace Delivery\SDK\Services;
 
 use Delivery\SDK\Services\Api\CDEK;
+use Exception;
 
 enum Company: string
 {
@@ -15,10 +16,17 @@ enum Company: string
         };
     }
 
-    public function initObject()
+    /**
+     * @throws Exception
+     */
+    public function create(): DeliveryInterface
     {
-        return match ($this) {
-            self::CDEK => CDEK::create()
-        };
+        $class = $this->getClass();
+
+        if(!is_subclass_of($class, DeliveryInterface::class)) {
+            throw new Exception(sprintf("Class $class does not implement interface %s", DeliveryInterface::class));
+        }
+
+        return $class::create();
     }
 }

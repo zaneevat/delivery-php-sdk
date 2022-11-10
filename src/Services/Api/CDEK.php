@@ -2,7 +2,9 @@
 
 namespace Delivery\SDK\Services\Api;
 
-class CDEK
+use Delivery\SDK\Services\DeliveryInterface;
+
+class CDEK implements DeliveryInterface
 {
     public function calculation()
     {
