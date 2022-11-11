@@ -22,12 +22,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Delivery\\SDK\\": "src"
+      "Zaneevat\\Delivery\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Delivery\\SDK\\Tests\\": "tests"
+      "Zaneevat\\Delivery\\Tests\\": "tests"
     }
   },
   "require-dev": {

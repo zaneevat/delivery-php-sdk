@@ -1,8 +1,8 @@
 <?php
 
-namespace Delivery\SDK\Services\Api;
+namespace Zaneevat\Delivery;
 
-use Delivery\SDK\Services\DeliveryInterface;
+use Zaneevat\Delivery\Order\OrderType;
 
 class CDEK implements DeliveryInterface
 {

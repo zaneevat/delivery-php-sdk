@@ -1,6 +1,6 @@
 <?php
 
-namespace Delivery\SDK\Services;
+namespace Zaneevat\Delivery;
 
 interface DeliveryInterface
 {

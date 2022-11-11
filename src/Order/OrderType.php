@@ -1,6 +1,6 @@
 <?php
 
-namespace Delivery\SDK\Services\Api;
+namespace Zaneevat\Delivery\Order;
 
 enum OrderType: string
 {

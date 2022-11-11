@@ -14,7 +14,7 @@ REST API PHP SDK служб доставки
 ```php
 <?php
 
-$cdek = \Delivery\SDK\Services\Api\CDEK::create();
+$cdek = \Delivery\SDK\CDEK::create();
 $orderInfo = $cdek->orderInfo('')
 $calculation = $cdek
     ->setConfig([

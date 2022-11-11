@@ -1,6 +1,6 @@
 <?php
 
-namespace Delivery\SDK\Services;
+namespace Zaneevat\Delivery;
 
 class Delivery
 {
@@ -25,6 +25,16 @@ class Delivery
         $this->services = $services;
 
         return $this;
+    }
+
+    public function getConfig(): array
+    {
+        return $this->config;
+    }
+
+    public function getServices(): array
+    {
+        return $this->services;
     }
 
     public function calculation(array $params): array

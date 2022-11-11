@@ -1,14 +1,13 @@
 <?php
 
-namespace Unit\Services\Api;
+namespace Zaneevat\Delivery\Tests\Unit;
 
-use Delivery\SDK\Services\Api\CDEK;
-use Delivery\SDK\Services\Company;
-use Delivery\SDK\Services\DeliveryInterface;
-use Exception;
 use PHPUnit\Framework\TestCase;
+use Zaneevat\Delivery\CDEK;
+use Zaneevat\Delivery\Company;
+use Zaneevat\Delivery\DeliveryInterface;
 
-class CompanyTest extends TestCase
+final class CompanyTest extends TestCase
 {
     public function testGetClass(): void
     {
@@ -17,7 +16,7 @@ class CompanyTest extends TestCase
     }
 
     /**
-     * @throws Exception
+     * @throws \Exception
      */
     public function testCreate(): void
     {

@@ -1,9 +1,6 @@
 <?php
 
-namespace Delivery\SDK\Services;
-
-use Delivery\SDK\Services\Api\CDEK;
-use Exception;
+namespace Zaneevat\Delivery;
 
 enum Company: string
 {
@@ -17,14 +14,14 @@ enum Company: string
     }
 
     /**
-     * @throws Exception
+     * @throws \Exception
      */
     public function create(): DeliveryInterface
     {
         $class = $this->getClass();
 
-        if(!is_subclass_of($class, DeliveryInterface::class)) {
-            throw new Exception(sprintf("Class $class does not implement interface %s", DeliveryInterface::class));
+        if (!is_subclass_of($class, DeliveryInterface::class)) {
+            throw new \Exception(sprintf("Class $class does not implement interface %s", DeliveryInterface::class));
         }
 
         return $class::create();

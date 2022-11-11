@@ -1,11 +1,11 @@
 <?php
 
-namespace Unit\Services\Api;
+namespace Zaneevat\Delivery\Tests\Unit;
 
-use Delivery\SDK\Services\Api\CDEK;
 use PHPUnit\Framework\TestCase;
+use Zaneevat\Delivery\CDEK;
 
-class CDEKTest extends TestCase
+final class CDEKTest extends TestCase
 {
     public function testOrderInfo(): void
     {
