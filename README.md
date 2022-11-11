@@ -14,7 +14,7 @@ REST API PHP SDK служб доставки
 ```php
 <?php
 
-$cdek = \Delivery\SDK\CDEK::create();
+$cdek = \Zaneevat\Delivery\CDEK::create();
 $orderInfo = $cdek->orderInfo('')
 $calculation = $cdek
     ->setConfig([
@@ -24,7 +24,7 @@ $calculation = $cdek
     ])
     ->calculation();
 
-$delivery = \Delivery\SDK\Services\Delivery::create()
+$delivery = \Zaneevat\Delivery\Delivery::create()
     ->setConfig([
         'cdek' => [
             'url' => 'https://api.cdek.ru/',
@@ -34,7 +34,7 @@ $delivery = \Delivery\SDK\Services\Delivery::create()
     ]);
 
 $calculation = $delivery
-    ->setServices([\Delivery\SDK\Services\Company::CDEK->value])
+    ->setServices([\Zaneevat\Delivery\Company::CDEK->value])
     ->calculation([
         'from' => [
             'city' => 'Москва',
@@ -48,7 +48,7 @@ $calculation = $delivery
     ]);
     
 $multipleCalculations = $delivery
-    ->setServices([\Delivery\SDK\Services\Company::CDEK->value])
+    ->setServices([\Zaneevat\Delivery\Company::CDEK->value])
     ->multipleCalculations([
         [
             'from' => [
@@ -63,5 +63,5 @@ $multipleCalculations = $delivery
         ],            
     ]);
 
-$orderInfo1 = \Delivery\SDK\Services\Company::from('cdek')->create()->orderInfo();
+$orderInfo1 = \Zaneevat\Delivery\Company::from('cdek')->create()->orderInfo();
 ```

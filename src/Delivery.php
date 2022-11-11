@@ -2,6 +2,8 @@
 
 namespace Zaneevat\Delivery;
 
+use Zaneevat\Delivery\Calculation\CalculationData;
+
 class Delivery
 {
     private array $config;
@@ -37,7 +39,7 @@ class Delivery
         return $this->services;
     }
 
-    public function calculation(array $params): array
+    public function calculation(CalculationData $data): array
     {
         return [];
     }
@@ -47,13 +49,7 @@ class Delivery
      */
     public function multipleCalculations(array $params): array
     {
-        $array = [];
-
-        foreach ($params as $param) {
-            $array[] = $this->calculation($params);
-        }
-
-        return $array;
+        return [];
     }
 
     public static function create(): self
