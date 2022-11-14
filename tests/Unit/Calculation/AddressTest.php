@@ -1,6 +1,6 @@
 <?php
 
-namespace Zaneevat\Delivery\Tests\Unit\Calculation;
+namespace Unit\Calculation;
 
 use PHPUnit\Framework\TestCase;
 use Zaneevat\Delivery\Calculation\Address;

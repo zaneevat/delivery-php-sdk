@@ -14,7 +14,8 @@ REST API PHP SDK служб доставки
 ```php
 <?php
 
-$cdek = \Zaneevat\Delivery\CDEK::create();
+$cdek = \Zaneevat\Delivery\CDEK::create('login', 'password');
+
 $orderInfo = $cdek->orderInfo('')
 $calculation = $cdek
     ->setConfig([
