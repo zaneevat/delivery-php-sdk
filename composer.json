@@ -33,7 +33,8 @@
   "require-dev": {
     "phpunit/phpunit": "^9",
     "phpstan/phpstan": "^1.9",
-    "friendsofphp/php-cs-fixer": "^3.13"
+    "friendsofphp/php-cs-fixer": "^3.13",
+    "rector/rector": "^0.14.7"
   },
   "scripts": {
     "phpunit": [
@@ -45,6 +46,9 @@
     "php-cs-fixer": [
       "vendor/bin/php-cs-fixer fix src --config=.php-cs-fixer.dist.php",
       "vendor/bin/php-cs-fixer fix tests --config=.php-cs-fixer.dist.php"
+    ],
+    "php-rector": [
+      "vendor/bin/rector process src --dry-run"
     ]
   }
 }

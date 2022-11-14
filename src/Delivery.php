@@ -6,13 +6,12 @@ use Zaneevat\Delivery\Calculation\CalculationData;
 
 class Delivery
 {
-    private array $config;
+    private array $config = [];
     private array $services;
 
     public function __construct()
     {
         $this->services = Company::cases();
-        $this->config = []; // TODO: Реализовать получение из конфиг файла
     }
 
     public function setConfig(array $config): self
